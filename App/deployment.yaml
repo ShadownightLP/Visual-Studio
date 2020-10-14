@@ -3,16 +3,16 @@ kind: DeploymentofKubernetesApp
 metadata:
   name: AppforKubernetes-deployment
   labels:
-    app: AppforKubernetes
+  app: AppforKubernetes
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: AppforKubernetes
+    app: AppforKubernetes
   template:
     metadata:
       labels:
-        app: AppforKubernetes
+      app: AppforKubernetes
     spec:
       nodeSelector:
         type: backend
