@@ -14,9 +14,7 @@ spec:
       labels:
       app: AppforKubernetes
     spec:
-      nodeSelector:
-        type: backend
-        containers:
+      containers:
         name: AppforKubernetes
           image: appforkubernetes
           ports:
