@@ -16,8 +16,8 @@ spec:
     spec:
       nodeSelector:
         type: backend
-      containers:
-        - name: AppforKubernetes
+        containers:
+        name: AppforKubernetes
           image: appforkubernetes
           ports:
-            - containerPort: 8080
+           containerPort: 8080
