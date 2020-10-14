@@ -5,8 +5,8 @@ metadata:
   labels:
   app: AppforKubernetes
 spec:
-  replicas: 2
-  selector:
+    replicas: 2
+    selector:
     matchLabels:
     app: AppforKubernetes
   template:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         name: AppforKubernetes
-          image: appforkubernetes
-          ports:
+        image: appforkubernetes
+        ports:
            containerPort: 8080
