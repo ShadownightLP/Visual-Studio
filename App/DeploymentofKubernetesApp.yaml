@@ -6,7 +6,7 @@ metadata:
   app: AppforKubernetes
 spec:
     replicas: 2
-    selector: node02 node04
+    selector:
     matchLabels:
     app: AppforKubernetes
   template:
