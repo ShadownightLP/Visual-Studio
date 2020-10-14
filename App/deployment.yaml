@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: AppforKubernetes
-        image: AppforKubernetes
+        image: appforkubernetes
         ports:
         - containerPort: 80
