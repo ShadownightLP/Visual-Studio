@@ -1,23 +1,23 @@
-piVersion: apps/v1
-kind: Deployment
+apiVersion: apps/v1
+kind: DeploymentofKubernetesApp
 metadata:
-  name: appforkubernetes-deployment
+  name: AppforKubernetes-deployment
   labels:
-    app: appforkubernetes
+    app: AppforKubernetes
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: appforkubernetes
+      app: AppforKubernetes
   template:
     metadata:
       labels:
-        app: appforkubernetes
+        app: AppforKubernetes
     spec:
       nodeSelector:
         type: backend
       containers:
-        - name: appforkubernetes
+        - name: AppforKubernetes
           image: appforkubernetes
           ports:
-            - containerPort: 80
+            - containerPort: 8080
