@@ -18,6 +18,6 @@ spec:
         type: backend
       containers:
         name: AppforKubernetes
-        image: appforkubernetes
+        image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
         ports:
            containerPort: 8080
