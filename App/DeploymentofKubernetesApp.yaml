@@ -5,8 +5,8 @@ metadata:
   labels:
   app: AppforKubernetes
 spec:
-    replicas: 2
-    selector: node01 node04
+    replicas: 5
+    selector: node01 node02 node03 node04 node05
     matchLabels:
     app: AppforKubernetes
   template:
