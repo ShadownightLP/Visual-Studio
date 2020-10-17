@@ -6,16 +6,22 @@ metadata:
   app: appforkubernetes
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-    app: appforkubernetes
   template:
     metadata:
       labels:
       app: appforkubernetes
     spec:
       containers:
-        name: appforkubernetes
+        - name: appforkubernetes
           image: kubernetesclustercomputer/kubernetesprivate_repo:b5ce375c3b23
           ports:
-           containerPort: 80
+          - containerPort: 8080
+            protocol: TCP
+           resources:
+             requests:
+            cpu: 100m
+            memory: 100Mi
+            limits:
+            cpu: 500m
+            memory: 2500Mi
+    
