@@ -1,21 +1,21 @@
 apiVersion: apps/v1
-kind: DeploymentofKubernetesApp
+kind: Deployment
 metadata:
-  name: AppforKubernetes-deployment
+  name: appforkubernetes-deployment
   labels:
-  app: AppforKubernetes
+  app: appforkubernetes
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
-    app: AppforKubernetes
+    app: appforkubernetes
   template:
     metadata:
       labels:
-      app: AppforKubernetes
+      app: appforkubernetes
     spec:
       containers:
-        name: AppforKubernetes
-          image: appforkubernetes
+        name: appforkubernetes
+          image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
           ports:
-           containerPort: 8080
+           containerPort: 80

@@ -1,23 +1,21 @@
 apiVersion: apps/v1
-kind: DeploymentofKubernetesApp
+kind: Deployment
 metadata:
-  name: AppforKubernetes-deployment
+  name: appforkubernetes-deployment
   labels:
-  app: AppforKubernetes
+  app: appforkubernetes
 spec:
-    replicas: 5
-    selector: node01 node02 node03 node04 node05
+  replicas: 4
+  selector:
     matchLabels:
-    app: AppforKubernetes
+    app: appforkubernetes
   template:
     metadata:
       labels:
-      app: AppforKubernetes
+      app: appforkubernetes
     spec:
-      nodeSelector:
-        type: backend
       containers:
-        name: AppforKubernetes
-        image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
-        ports:
-           containerPort: 8080
+        name: appforkubernetes
+          image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
+          ports:
+           containerPort: 80
