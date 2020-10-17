@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         name: appforkubernetes
-          image: b5ce375c3b23:tag01
+          image: kubernetesclustercomputer/kubernetesprivate_repo:b5ce375c3b23
           ports:
            containerPort: 80
