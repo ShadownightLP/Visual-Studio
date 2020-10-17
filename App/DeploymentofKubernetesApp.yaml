@@ -14,8 +14,6 @@ spec:
       labels:
       app: AppforKubernetes
     spec:
-      nodeSelector:
-        type: backend
       containers:
         -name: AppforKubernetes
         image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
