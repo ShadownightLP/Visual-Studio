@@ -5,8 +5,8 @@ metadata:
   labels:
   app: AppforKubernetes
 spec:
-  replicas: 2
-  selector:
+    replicas: 5
+    selector: node01 node02 node03 node04 node05
     matchLabels:
     app: AppforKubernetes
   template:
@@ -14,7 +14,10 @@ spec:
       labels:
       app: AppforKubernetes
     spec:
+      nodeSelector:
+        type: backend
       containers:
-        -name: AppforKubernetes
+        name: AppforKubernetes
         image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
-        
+        ports:
+           containerPort: 8080
