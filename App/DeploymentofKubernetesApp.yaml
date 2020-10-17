@@ -17,7 +17,7 @@ spec:
       nodeSelector:
         type: backend
       containers:
-        name: AppforKubernetes
+        -name: AppforKubernetes
         image: kubernetesclustercomputer/kubernetesprivate_repo:tag01
         ports:
            containerPort: 8080
