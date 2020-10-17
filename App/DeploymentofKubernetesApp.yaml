@@ -12,8 +12,8 @@ spec:
       app: appforkubernetes
     spec:
       containers:
-        - name: appforkubernetes
-          image: kubernetesclustercomputer/kubernetesprivate_repo:b5ce375c3b23
+        - name: b5ce375c3b23
+          image: kubernetesclustercomputer/kubernetesprivate_repo:tag1
           ports:
           - containerPort: 8080
             protocol: TCP
@@ -24,4 +24,3 @@ spec:
             limits:
             cpu: 500m
             memory: 2500Mi
-    
