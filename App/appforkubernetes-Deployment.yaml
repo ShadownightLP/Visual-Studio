@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appforkubernetes-deployment
+  name: appforkubernetes-Deployment
   labels:
     app: appforkubernetes
 spec:
